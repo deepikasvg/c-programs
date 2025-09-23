@@ -22,3 +22,25 @@ int main() {
     return 0;
 }
 ```
+
+##  PROGRAM TO CHECK WHETHER A GIVEN NUMBER IS EVEN OR ODD
+```
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    // Input number
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    // Check if even or odd
+    if (num % 2 == 0) {
+        printf("%d is an even number.\n", num);
+    } else {
+        printf("%d is an odd number.\n", num);
+    }
+
+    return 0;
+}
+```
