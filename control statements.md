@@ -44,3 +44,23 @@ int main() {
     return 0;
 }
 ```
+##  PROGRAM TO CHECK WHETHER A GIVEN NUMBER IS POSITIVE OR NEGATIVE
+```
+#include<stdio.h>
+
+int main(){
+int num;
+
+printf("enter an integer: ");
+scanf("%d", &num);
+
+if(num > 0) {
+printf(" num is positive.\n");
+}
+if else(num < 0) {
+printf("num is negitive. \n");
+} else {
+printf("num is zero.");
+}
+}
+```
