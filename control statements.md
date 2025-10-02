@@ -308,6 +308,94 @@ int main() {
     return 0;
 }
 ```
+##  C PROGRAM TO FIND MAXIMUM BETWEEN TWO NUMBERS USING SWITCH CASE
+```
+ #include <stdio.h>
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    switch (num1 > num2) {
+        case 1: 
+            printf("Maximum = %d\n", num1);
+            break;
+
+        case 0: 
+            switch (num2 > num1) {
+                case 1:
+                    printf("Maximum = %d\n", num2);
+                    break;
+                case 0:
+                    printf("Both numbers are equal: %d\n", num1);
+                    break;
+            }
+            break;
+    }
+
+    return 0;
+}
+```
+##  C PROGRAM TO PRINT EVEN NUMBERS BETWEEN 1 TO 20 USING A FOR LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    printf("Even numbers between 1 to 20 are:\n");
+
+    for (i = 1; i <= 20; i++) {
+        if (i % 2 == 0) {   // check if number is even
+            printf("%d ", i);
+        }
+    }
+
+    return 0;
+}
+```
+##  C PROGRAM TO CALCULATE THE SUM OF NUMBERS FROM 1 TO 100 USING A WHILE LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int i = 1, sum = 0;
+
+    while (i <= 100) {
+        sum += i;   
+        i++;        
+    }
+
+    printf("The sum of numbers from 1 to 100 is: %d\n", sum);
+
+    return 0;
+}
+```
+## A C PROGRAM TO FIND THE FACTORIAL OF A GIVEN NUMBER USING A FOR LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    unsigned long long fact = 1;  
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+        for (i = 1; i <= n; i++) {
+            fact *= i;   
+        }
+        printf("Factorial of %d = %llu\n", n, fact);
+    }
+
+    return 0;
+}
+```
+
+
+
 
 
 
