@@ -393,6 +393,58 @@ int main() {
     return 0;
 }
 ```
+## C PROGRAM TO CHECK WHETHER A GIVEN NUMBER IS PRIME OR NOT USING A WHILE LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int num, i = 2, isPrime = 1;
+
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+
+    if (num <= 1) {
+        isPrime = 0; 
+    } else {
+        while (i <= num / 2) {
+            if (num % i == 0) {
+                isPrime = 0; 
+                break;
+            }
+            i++;
+        }
+    }
+
+    if (isPrime)
+        printf("%d is a prime number.\n", num);
+    else
+        printf("%d is not a prime number.\n", num);
+
+    return 0;
+}
+```
+##  C PROGRAM TO FIND THE SUM OF DIGITS OF A NUMBER USING A WHILE LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int num, digit, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while (num != 0) {
+        digit = num % 10;   
+        sum += digit;       
+        num /= 10;          
+    }
+
+    printf("Sum of digits = %d\n", sum);
+
+    return 0;
+}
+```
+
 
 
 
