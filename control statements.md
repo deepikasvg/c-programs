@@ -552,6 +552,423 @@ int main() {
     return 0;
 }
 ```
+## .WRITE A C PROGRAM TO PRINT ALL THE ELEMENTS OF AN ARRAY USING A FOR LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("The elements of the array are:\n");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
+```
+##  C PROGRAM TO FIND THE SUM OF ELEMENTS IN AN ARRAY USING A WHILE LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int n, i = 0, sum = 0;
+
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter %d elements:\n", n);
+    for (int j = 0; j < n; j++) {
+        scanf("%d", &arr[j]);
+    }
+
+    while (i < n) {
+        sum += arr[i];
+        i++;
+    }
+
+    printf("Sum of all elements in the array = %d\n", sum);
+
+    return 0;
+}
+```
+## C PROGRAM TO COUNT THE NUMBER OF VOWELS IN A GIVEN STRING USING A FOR LOOP
+```
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int count = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin); // Reads string including spaces
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        char ch = str[i];
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+            ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+            count++;
+        }
+    }
+
+    printf("Number of vowels in the string: %d\n", count);
+
+    return 0;
+}
+```
+##  C PROGRAM TO COUNT THE NUMBER OF WORDS IN A GIVEN STRING USING A WHILE LOOP
+```
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char str[200];
+    int i = 0, wordCount = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin); 
+
+    // Skip leading spaces
+    while (isspace(str[i])) {
+        i++;
+    }
+
+    while (str[i] != '\0') {
+        if (!isspace(str[i]) && (isspace(str[i + 1]) || str[i + 1] == '\0')) {
+            wordCount++;
+
+```
+##  A C PROGRAM TO CHECK WHETHER A GIVEN STRING IS A PALINDROME OR NOT USING A FOR LOOP
+```
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int length, isPalindrome = 1;
+
+    printf("Enter a string: ");
+    scanf("%s", str);  
+
+    length = strlen(str);
+
+    for (int i = 0; i < length / 2; i++) {
+        if (str[i] != str[length - i - 1]) {
+            isPalindrome = 0;
+            break;
+        }
+    }
+
+    if (isPalindrome)
+        printf("The string is a palindrome.\n");
+    else
+        printf("The string is not a palindrome.\n");
+
+    return 0;
+}
+```
+##  C PROGRAM TO CONCATENATE TWO STRINGS WITHOUT USING LIBRARY FUNCTION USING A WHILE LOOP
+```
+#include <stdio.h>
+
+int main() {
+    char str1[100], str2[100];
+    int i = 0, j = 0;
+
+    printf("Enter the first string: ");
+    scanf("%s", str1);
+
+    printf("Enter the second string: ");
+    scanf("%s", str2);
+    while (str1[i] != '\0') {
+        i++;
+    }
+    while (str2[j] != '\0') {
+        str1[i] = str2[j];
+        i++;
+        j++;
+    }
+
+    str1[i] = '\0'; 
+
+    printf("Concatenated string: %s\n", str1);
+
+    return 0;
+}
+```
+##  C PROGRAM TO FIND THE LENGTH OF A STRING USING A FOR LOOP
+```
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int length = 0;
+
+    printf("Enter a string: ");
+    scanf("%s", str);  // Reads string without spaces
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        length++;
+    }
+
+    printf("Length of the string: %d\n", length);
+
+    return 0;
+}
+```
+## C PROGRAM TO CONVERT A STRING TO UPPERCASE USING A WHILE LOOP
+```
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin); 
+
+    while (str[i] != '\0') {
+        if (str[i] >= 'a' && str[i] <= 'z') {
+            str[i] = str[i] - 32; 
+        }
+        i++;
+    }
+
+    printf("Uppercase string: %s\n", str);
+
+    return 0;
+}
+```
+##  C PROGRAM TO FIND THE POWER OF A NUMBER USING A FOR LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int base, exponent;
+    long long result = 1;
+
+    printf("Enter the base: ");
+    scanf("%d", &base);
+
+    printf("Enter the exponent: ");
+    scanf("%d", &exponent);
+
+    for (int i = 1; i <= exponent; i++) {
+        result *= base;
+    }
+
+    printf("%d raised to the power of %d is: %lld\n", base, exponent, result);
+
+    return 0;
+}
+```
+##  C PROGRAM TO FIND THE FACTORIAL OF A NUMBER USING A WHILE LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int num, i = 1;
+    unsigned long long factorial = 1;
+
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+        while (i <= num) {
+            factorial *= i;
+            i++;
+        }
+        printf("Factorial of %d = %llu\n", num, factorial);
+    }
+
+    return 0;
+}
+```
+## C PROGRAM TO FIND THE GCD OF TWO NUMBERS USING A WHILE LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    printf("Enter two positive integers: ");
+    scanf("%d %d", &a, &b);
+
+    while (a != b) {
+        if (a > b)
+            a = a - b;
+        else
+            b = b - a;
+    }
+
+    printf("GCD = %d\n", a);
+
+    return 0;
+}
+```
+##  C PROGRAM TO FIND THE LCM OF TWO NUMBERS USING A FOR LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int a, b, max;
+
+    printf("Enter two positive integers: ");
+    scanf("%d %d", &a, &b);
+    max = (a > b) ? a : b;
+
+    for (int i = max; i <= a * b; i++) {
+        if (i % a == 0 && i % b == 0) {
+            printf("LCM of %d and %d is: %d\n", a, b, i);
+            break;
+        }
+    }
+
+    return 0;
+}
+```
+##  C PROGRAM TO PRINT THE MULTIPLICATION TABLE OF A GIVEN NUMBER USING A FOR LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter a number to print its multiplication table: ");
+    scanf("%d", &num);
+
+    printf("Multiplication table of %d:\n", num);
+
+    for (int i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", num, i, num * i);
+    }
+
+    return 0;
+}
+```
+##  A PROGRAM IN C TO PRINT THE ARMSTRONG NUMBERS BETWEEN 1 AND 1000 USING FOR LOOP
+```
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num, originalNum, remainder, result;
+
+    printf("Armstrong numbers between 1 and 1000 are:\n");
+
+    for (num = 1; num <= 1000; num++) {
+        originalNum = num;
+        result = 0;
+
+        while (originalNum != 0) {
+            remainder = originalNum % 10;
+            result += remainder * remainder * remainder;
+            originalNum /= 10;
+        }
+
+        if (result == num) {
+            printf("%d\n", num);
+        }
+    }
+
+    return 0;
+}
+```
+##  A SIMPLE CALCULATOR USING SWITCH-CASE STATEMENT
+```
+#include <stdio.h>
+
+int main() {
+    char operator;
+    double num1, num2;
+
+    printf("Enter an operator (+, -, *, /): ");
+    scanf(" %c", &operator);  // Space before %c to consume any leftover newline
+
+    printf("Enter two operands: ");
+    scanf("%lf %lf", &num1, &num2);
+
+    switch (operator) {
+        case '+':
+            printf("%.2lf + %.2lf = %.2lf\n", num1, num2, num1 + num2);
+            break;
+        case '-':
+            printf("%.2lf - %.2lf = %.2lf\n", num1, num2, num1 - num2);
+            break;
+        case '*':
+            printf("%.2lf * %.2lf = %.2lf\n", num1, num2, num1 * num2);
+            break;
+        case '/':
+            if (num2 != 0)
+                printf("%.2lf / %.2lf = %.2lf\n", num1, num2, num1 / num2);
+            else
+                printf("Error: Division by zero is not allowed.\n");
+            break;
+        default:
+            printf("Invalid operator.\n");
+    }
+
+    return 0;
+}
+```
+##  CHECK WHETHER A GIVEN NUMBER IS A PALINDROME OR NOT USING WHILE LOOPS AND IF-ELSE STATEMENT
+```
+#include <stdio.h>
+
+int main() {
+    int num, originalNum, reversedNum = 0, remainder;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    originalNum = num;
+
+    while (num != 0) {
+        remainder = num % 10;
+        reversedNum = reversedNum * 10 + remainder;
+        num /= 10;
+    }
+
+    if (originalNum == reversedNum) {
+        printf("%d is a palindrome.\n", originalNum);
+    } else {
+        printf("%d is not a palindrome.\n", originalNum);
+    }
+
+    return 0;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
