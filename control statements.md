@@ -444,6 +444,118 @@ int main() {
     return 0;
 }
 ```
+##  C PROGRAM TO PRINT FIBONACCI SERIES UP TO N TERMS USING A FOR LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int n, first = 0, second = 1, next;
+
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Series up to %d terms:\n", n);
+
+    for (int i = 0; i < n; i++) {
+        if (i <= 1)
+            next = i;
+        else {
+            next = first + second;
+            first = second;
+            second = next;
+        }
+        printf("%d ", next);
+    }
+
+    return 0;
+}
+```
+##  C PROGRAM TO REVERSE A GIVEN NUMBER USING A WHILE LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int num, reversed = 0, remainder;
+
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    while (num != 0) {
+        remainder = num % 10;           
+        reversed = reversed * 10 + remainder; 
+        num = num / 10;                 
+    }
+
+    printf("Reversed number: %d\n", reversed);
+
+    return 0;
+}
+```
+##  C PROGRAM TO FIND THE LARGEST ELEMENT IN AN ARRAY USING A FOR LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int max = arr[0]; 
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max) {
+            max = arr[i]; 
+        }
+    }
+
+    printf("The largest element in the array is: %d\n", max);
+
+    return 0;
+}
+```
+##  C PROGRAM TO FIND THE SMALLEST ELEMENT IN AN ARRAY USING A WHILE LOOP
+```
+#include <stdio.h>
+
+int main() {
+    int n, i = 1;
+
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter %d elements:\n", n);
+    for (int j = 0; j < n; j++) {
+        scanf("%d", &arr[j]);
+    }
+
+    int min = arr[0]; 
+
+    while (i < n) {
+        if (arr[i] < min) {
+            min = arr[i]; 
+        }
+        i++;
+    }
+
+    printf("The smallest element in the array is: %d\n", min);
+
+    return 0;
+}
+```
+
+
+
+
 
 
 
