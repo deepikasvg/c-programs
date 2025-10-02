@@ -151,6 +151,167 @@ int main() {
     return 0;
 }
 ```
+##  C PROGRAM TO CHECK WHETHER A CHARACTER IS A VOWEL OR CONSONANT
+```
+#include <stdio.h>
+
+int main() {
+    char ch;
+    printf("Enter an alphabet: ");
+    scanf("%c", &ch);
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+        ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+        printf("%c is a Vowel.\n", ch);
+    } 
+    else {
+        if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+            printf("%c is a Consonant.\n", ch);
+        } else {
+            printf("%c is not an alphabet.\n", ch);
+        }
+    }
+
+    return 0;
+}
+```
+## C PROGRAM TO CHECK WHETHER A CHARACTER IS AN ALPHABET OR NOT
+```
+#include <stdio.h>
+
+int main() {
+    char ch;
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+        printf("%c is an Alphabet.\n", ch);
+    } else {
+        printf("%c is NOT an Alphabet.\n", ch);
+    }
+
+    return 0;
+}
+```
+##  C PROGRAM TO FIND MINIMUM OR MAXIMUM BETWEEN TWO NUMBERS
+```
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    if (num1 > num2) {
+        printf("Maximum = %d\n", num1);
+        printf("Minimum = %d\n", num2);
+    } else if (num2 > num1) {
+        printf("Maximum = %d\n", num2);
+        printf("Minimum = %d\n", num1);
+    } else {
+        printf("Both numbers are equal: %d\n", num1);
+    }
+
+    return 0;
+}
+```
+## C PROGRAM TO ENTER WEEK NUMBER AND PRINT DAY OF WEEK
+```
+#include <stdio.h>
+
+int main() {
+    int week;
+    printf("Enter week number (1-7): ");
+    scanf("%d", &week);
+    switch (week) {
+        case 1:
+            printf("Sunday\n");
+            break;
+        case 2:
+            printf("Monday\n");
+            break;
+        case 3:
+            printf("Tuesday\n");
+            break;
+        case 4:
+            printf("Wednesday\n");
+            break;
+        case 5:
+            printf("Thursday\n");
+            break;
+        case 6:
+            printf("Friday\n");
+            break;
+        case 7:
+            printf("Saturday\n");
+            break;
+        default:
+            printf("Invalid week number! Please enter 1-7.\n");
+    }
+
+    return 0;
+}
+```
+## C PROGRAM TO CHECK WHETHER A CHARACTER IS UPPERCASE OR LOWERCASE
+```
+#include <stdio.h>
+
+int main() {
+    char ch;
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+    if (ch >= 'A' && ch <= 'Z') {
+        printf("%c is an Uppercase letter.\n", ch);
+    }
+    else if (ch >= 'a' && ch <= 'z') {
+        printf("%c is a Lowercase letter.\n", ch);
+    }
+    else {
+        printf("%c is not an alphabet character.\n", ch);
+    }
+
+    return 0;
+}
+```
+##  C PROGRAM TO FIND NUMBER OF DAYS IN MONTH
+```
+#include <stdio.h>
+
+int main() {
+    int month;
+    printf("Enter month number (1-12): ");
+    scanf("%d", &month);
+
+    switch(month) {
+        case 1:  // January
+        case 3:  // March
+        case 5:  // May
+        case 7:  // July
+        case 8:  // August
+        case 10: // October
+        case 12: // December
+            printf("Month %d has 31 days.\n", month);
+            break;
+
+        case 4:  // April
+        case 6:  // June
+        case 9:  // September
+        case 11: // November
+            printf("Month %d has 30 days.\n", month);
+            break;
+
+        case 2:  // February
+            printf("Month %d has 28 or 29 days (leap year).\n", month);
+            break;
+
+        default:
+            printf("Invalid month number! Please enter 1-12.\n");
+    }
+
+    return 0;
+}
+```
+
+
+
+
 
 
 
